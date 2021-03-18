@@ -1,0 +1,4 @@
+api.qwant.com:HSTS	0	18698	1647073542497,1,1,2
+firefox.settings.services.mozilla.com:HSTS	0	18698	1647073546607,1,0,2
+s2.qwant.com:HSTS	0	18698	1647073542583,1,1,2
+www.qwant.com:HSTS	0	18698	1647073542493,1,1,2

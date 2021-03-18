@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=conky -p 10
+Hidden=false
+X-Mate-Autostart-enabled=true
+Name[fr_BE]=Conky
+Name=Conky
+Comment=[fr_BE]=
+Comment=

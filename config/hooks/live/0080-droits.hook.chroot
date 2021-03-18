@@ -1,0 +1,6 @@
+#!/bin/sh
+
+
+# Changer fond d'écran
+
+chmod ugo+x /usr/local/bin/webradiov2.sh

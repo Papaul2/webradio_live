@@ -1,0 +1,74 @@
+-- vim: ts=4 sw=4 noet ai cindent syntax=lua
+conky.config = {
+    alignment = 'top_right',
+    background = false,
+    border_width = 1,
+    cpu_avg_samples = 2,
+	default_color = 'white',
+    default_outline_color = 'white',
+    default_shade_color = 'white',
+    draw_borders = false,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    use_xft = true,
+    font = 'Sans:size=9',
+    gap_x = 5,
+    gap_y = 60,
+    minimum_height = 5,
+	minimum_width = 10,
+	maximum_width = 200,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_stderr = false,
+    extra_newline = false,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'override',
+    stippled_borders = 0,
+    update_interval = 1.0,
+    uppercase = false,
+    use_spacer = 'none',
+    show_graph_scale = false,
+    if_up_strictness = 'address',
+    own_window_argb_visual = true,
+    own_window_transparent = false,
+    own_window_argb_value = 200,
+    total_run_times = 0,
+    double_buffer = true,
+    show_graph_range = false
+}
+
+conky.text = [[
+${color red}${font Sans:size=11,weight:bold}${alignc}.:: WebRadio ::.${font}$color
+${color red}${font Sans:size=11,weight:bold}${alignc}.:: CEMÉA Belges ::.${font}$color
+$hr
+${font Sans:size=11,weight:bold}${alignc}${time %a %d %b %Y}${font}
+${font Sans:size=11,weight:bold}${alignc}${time %H:%M}${font}
+$hr
+${color red}${font Sans:size=9,weight:bold}${alignc}Matériel${font}
+${color grey}CPU : ${color}${alignr}${cpu cpu0}% ${cpugauge cpu0 10,25}
+${color grey}RAM : ${color}${alignr}${mem} - ${memperc}% ${memgauge 10,25}
+$hr
+${color red}${font Sans:size=9,weight:bold}${alignc}Réseau${font}
+${color grey}IP filaire :${alignr}$color${if_up eno1} ${addr eno1}${else} Pas de connexion${endif}
+${color grey}IP WiFi:${alignr}$color ${addr wlp2s0} 
+#${color grey}IP utile:${alignr}$color ${exec echo `hostname -i | awk '{print $1}'`}
+${color grey}IP publique:${alignr}$color ${exec wget http://checkip.dyndns.org/ -O - -o /dev/null | cut -d: -f 2 | cut -d\< -f 1}
+${color grey}${alignc}Envoi${alignr}Réception${color}
+${color grey}Filaire :${alignc}${color}${upspeed eno1}${alignr}${downspeed eno1}
+${color grey}Sans fil :${alignc}${color}${upspeed wlp2s0}${alignr}${downspeed wlp2s0}
+$hr
+${color red}${font Sans:size=9,weight:bold}${alignc}Espace disque${font}
+${color grey}Utilisé : ${alignr}$color${fs_used /}
+${color grey}Libre : ${alignr}$color${fs_size /}
+$fs_bar
+$hr
+${color red}${font Sans:size=9,weight:bold}${alignc}Processus${font}
+${color grey}Nom                   ${alignr}CPU%     ${alignr}MEM%$color
+${top name 1} ${alignr}${top cpu 1}     ${alignr}${top mem 1}
+${top name 2} ${alignr}${top cpu 2}     ${alignr}${top mem 2}
+${top name 3} ${alignr}${top cpu 3}     ${alignr}${top mem 3}
+${top name 4} ${alignr}${top cpu 4}     ${alignr}${top mem 4}
+]]

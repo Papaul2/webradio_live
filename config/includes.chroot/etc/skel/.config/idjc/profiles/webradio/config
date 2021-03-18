@@ -1,0 +1,7 @@
+[resource_count]
+num_streamers=2
+num_micpairs=4
+num_recorders=1
+num_effects=12
+[misc]
+theme=lighttheme

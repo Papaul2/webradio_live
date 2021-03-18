@@ -1,0 +1,9 @@
+#!/bin/sh
+
+
+# Changer fond d'écran
+
+cp /usr/share/wallpapers/webradio/webradio_fond.png /usr/share/images/desktop-base/
+chmod 644 /usr/share/images/desktop-base/webradio_fond.png
+update-alternatives --install /usr/share/images/desktop-base/desktop-background desktop-background /usr/share/images/desktop-base/webradio_fond.png 65
+update-alternatives --set desktop-background /usr/share/images/desktop-base/webradio_fond.png

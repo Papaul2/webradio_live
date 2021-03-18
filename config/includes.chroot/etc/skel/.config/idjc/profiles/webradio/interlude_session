@@ -1,0 +1,9 @@
+extdir=/home/radio
+digiprogress_type=0
+stream_button=1
+listen_button=0
+force_button=0
+playlist_mode=0
+plsave_filetype=0
+plsave_open=0
+fade_mode=0

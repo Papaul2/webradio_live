@@ -1,0 +1,7 @@
+#!/bin/sh
+
+
+# Changer fond d'écran
+
+apt remove mate-media
+apt remove mate-media-common

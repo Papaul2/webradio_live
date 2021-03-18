@@ -1,0 +1,20 @@
+#!/bin/sh
+
+set -e
+
+lb config noauto \
+--mode debian \
+--system live \
+--distribution buster \
+--debian-installer live \
+--architecture amd64 \
+--archive-areas "main contrib non-free" \
+--security true \
+--updates true \
+--interactive false \
+--binary-images iso-hybrid \
+--bootappend-live "boot=live components locales=fr_BE.UTF-8 keyboard-layouts=be" \
+--bootappend-install "boot=live components locales=fr_BE.UTF-8 keyboard-layouts=be" \
+--iso-volume "Webradio CEMEA BE 0.1" \
+--memtest memtest86+
+	"${@}"
